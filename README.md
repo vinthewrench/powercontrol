@@ -1,10 +1,10 @@
-# Power Controller
+This repository contains a hardware power controller that enforces safe, predictable power-on and power-off behavior for a Raspberry Pi used in real-world automation systems.
 
-This repository contains a **deterministic power control subsystem** used to hard-control power to a downstream system (typically a Raspberry Pi or similar SBC).
+It grew out of the work described in [Raspberry Pi Internet of Things – Part 029](https://www.vinthewrench.com/p/raspberry-pi-internet-of-things-part-029), where the problem wasn’t software, but power: a Pi running irrigation, valves, radios, or sensors cannot simply lose power without consequences. Filesystems corrupt, tasks stop mid-cycle, and batteries get drained dry.
 
-The Power Controller is intentionally simple and boring.  
-It exists to make one decision reliably: **when power is applied and when it is cut**.
- 
+The design documented here takes those ideas further by moving power control out of the Pi and into a small, dedicated controller. The Pi decides when it is safe to shut down; the hardware enforces when power is actually applied or removed. A latching relay does the physical switching, while simple signals coordinate startup, shutdown, and recovery when utility power fails or returns.
+
+The result is a Raspberry Pi that behaves like part of a system, not a hobby board dangling from a power supply.
  
 ## Repository Layout
 
