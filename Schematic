@@ -1,0 +1,59 @@
+# --- AVR build artifacts ---
+*.elf
+*.hex
+*.eep
+*.map
+*.lss
+*.sym
+*.o
+*.d
+*.a
+
+# --- Build directories ---
+build/
+dist/
+
+# --- Doxygen output ---
+docs/
+doxygen/
+html/
+latex/
+
+# --- KiCad ---
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_prl-bak
+*.kicad_pro-bak
+*.kicad_sym-bak
+*.kicad_mod-bak
+*.kicad_prl
+*.kicad_pro
+
+# KiCad autosave & temp
+_autosave-*
+fp-info-cache
+*.tmp
+*.net
+
+# --- Fabrication outputs (keep zip, ignore exploded) ---
+*.gbr
+*.drl
+*.pos
+*.csv
+*.rpt
+
+# --- OS junk ---
+.DS_Store
+._*
+Thumbs.db
+
+# --- Editor junk ---
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# --- Logs ---
+*.log
