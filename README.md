@@ -125,8 +125,20 @@ Expected response:
 0x13 status_byte timer_MSB timer_LSB
 ```
 
-Full details are defined in the design document and are considered a **locked interface**.
+###  I2C Command Set
 
+| Command | Function |
+|-------|----------|
+| 0x00 | NO-OP watchdog ping |
+| 0x01 | Relay OFF |
+| 0x02 | Relay ON |
+| 0x03 | Red LED OFF |
+| 0x04 | Red LED ON |
+| 0x05 | Green LED OFF |
+| 0x06 | Green LED ON |
+| 0x10 | Set ping timeout (uint16 ms) |
+
+ 
 ---
 
 ## Non-Goals
